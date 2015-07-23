@@ -1,0 +1,53 @@
+Runtime-Polymorphism-in-java::
+
+
+
+Polymorphism in java is a concept by which we can perform a single action by different ways
+
+Runtime polymorphism or Dynamic Method Dispatch is a process in which a call to an overridden method is
+ resolved at runtime rather than compile-time.
+
+1.	class Car { 
+2.	void run(){System.out.println("running");} 
+3.	} 
+4.	class Honda extends Car{ 
+5.	void run(){System.out.println("running with 40km");} 
+6.	
+7.	public static void main(String args[]){ 
+8.	Car c = new Honda();//upcasting
+9.	c.run(); 
+10.	} 
+11.	} 
+Real life example of polymorphism
+Suppose if you are in class room that time you behave like a student,
+ when you are in market at that time you behave like a customer, when you at your home at that time you behave like a son or daughter, Here one person present in different-different behaviors. In java programming the polymorphism principal is implemented with method overriding concept of java. We know that method overriding is equal to method heading is some method body is different.
+
+Polymorphism principal is divided into two sub principal they are:
+
+1.Static / Compile time polymorphism
+
+2.Dynamic / Runtime polymorphism
+
+Static polymorphism::
+
+
+It is one of the sub principal of polymorphism one of the object oriented programming language supports
+ even static polymorphism. The language C, C++ supports static polymorphism principal by using
+its C++ programming concepts called function overloading and operator overloading as per as
+ standalone mechanism are concerned there is no difference in performance of static polymorphism and dynamic
+ polymorphism application but there is a significant difference in execution of there applications in busy
+ environment like client server environment.
+
+Definition:
+
+The process of finding the overloaded method within object at compile time is known as static polymorphism
+ due to static polymorphism utilization of resources (main memory space) is poor because for each and every
+ overloaded method a memory space is created at compile time when it binds with an object. 
+In C++ environment the above problem can be solve by using dynamic polymorphism by implementing with virtual 
+and pure virtual function so most of the C++ developer in real worlds follows only dynamic polymorphism.
+
+Dynamic polymorphism:
+
+In dynamic polymorphism method of the program binds with an object at runtime the advantage of
+ dynamic polymorphism is allocating the memory space for the method 
+(either for overloaded method or for override method) at run time.

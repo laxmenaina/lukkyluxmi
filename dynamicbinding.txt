@@ -1,0 +1,35 @@
+Dynamic Binding in Java 
+
+If we have two methods or variable with same name in a class hierarchy than it becomes tricky to find 
+which version is going to called at compile time, this scenario is called Dynamic Binding.
+       
+
+example
+
+
+public class Fruit {  
+ public void getName(){  
+  System.out.println("My name is fruit !");  
+ }  
+   
+}  
+  
+public class Apple extends Fruit {  
+ @Override  
+ public void getName() {  
+  System.out.println("My name is apple !");  
+ }  
+  
+}  
+  
+public class Implementation {  
+  
+ public static void main(String[] args) {  
+  /* 
+   * This is called Dynamic binding, as the compiler will never know which 
+   * version of getName() is going to called at runtime. 
+   */  
+  Fruit fruit = new Apple();  
+  fruit.getName();  
+ }  
+}  
